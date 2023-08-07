@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {ContainerProfil, Description, Name, Avatar, TagLocation, Stats, FollowersList, ViewsList. LikesList, Label, Quantity} from 'profil.styled.js'
+import {ContainerProfil, Description, Name, Avatar, TagLocation, Stats, FollowersList, ViewsList, LikesList, Label, Quantity} from "./profil.styled"
 
 export const Profile = ({username, tag, location, avatar, stats}) => (<ContainerProfil>
 <Description>

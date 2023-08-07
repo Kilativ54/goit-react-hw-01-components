@@ -26,11 +26,11 @@ display: flex;
     `
   
   
-  export const Name = styled. {
-    margin-bottom: 0.5rem;
+  export const Name = styled.p`  
+  margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 2.5rem;
-  }
+  `
   
  export const TagLocation = styled.p` 
    margin: 0.5rem;
