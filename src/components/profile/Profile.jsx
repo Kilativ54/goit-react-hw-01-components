@@ -1,38 +1,39 @@
 import PropTypes from 'prop-types';
-import {ContainerProfil, Description, Name, Avatar, TagLocation, Stats, FollowersList, ViewsList, LikesList, Label, Quantity} from "./profil.styled"
+import css from './Profile.module.css';
 
-export const Profile = ({username, tag, location, avatar, stats}) => (<ContainerProfil>
-<Description>
-  <Avatar
-    src={avatar}
-    alt="User avatar"
-      />
-  <Name>{username}</Name>
-  <TagLocation >@{tag}</TagLocation>
-  <TagLocation >{location}</TagLocation>
-</Description>
+function Profile({ username, avatar, tag, location, stats })
+ {   return ( <div className={css.profile}>
+  <div className={css.description}>
+    <img src={avatar} alt="User avatar" className={css.avatar} />
+    <p className={css.profileName}>{username}</p>
+    <p className={css.profileTag}>@{tag}</p>
+    <p className={css.profileLocation}>{location}</p>
+  </div>
 
-<Stats>
-  <FollowersList>
-    <Label>Followers</Label>
-<Quantity>{stats.followers}</Quantity>
-  </FollowersList>
-  <ViewsList>
-    <Label>Views</Label>
-    <Quantity>{stats.views}</Quantity>
-  </ViewsList>
-  <LikesList>
-    <Label>Likes</Label>
-    <Quantity>{stats.likes}</Quantity>
-  </LikesList>
-</Stats>
-</ContainerProfil>)
+  <ul className={css.stats}>
+    <li className={css.followersList}>
+      <span className={css.label}>Followers</span>
+      <span className={css.quantity}>{stats.followers}</span>
+    </li>
+    <li className={css.viewsList}>
+      <span className={css.label}>Views</span>
+      <span className={css.quantity}>{stats.views}</span>
+    </li>
+    <li className={css.likesList}>
+      <span className={css.label}>Likes</span>
+      <span className={css.quantity}>{stats.likes}</span>
+    </li>
+  </ul>
+</div>
+);}
 
 Profile.propTypes = {
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
-
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };
+
+
+export default Profile;
