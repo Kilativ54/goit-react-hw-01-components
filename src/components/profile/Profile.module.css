@@ -60,12 +60,12 @@
   border-right: 1px solid #d3d5e3;
 }
 
-.followersList{
-    border-radius: 0 0 0 0.5rem;
+.followersList {
+  border-radius: 0 0 0 0.5rem;
 }
 
-.likesList{
-    border-radius: 0 0 0.5rem;
+.likesList {
+  border-radius: 0 0 0.5rem;
 }
 
 .label {
@@ -74,5 +74,5 @@
 }
 .quantity {
   font-weight: bold;
-   border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
